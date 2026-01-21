@@ -13,10 +13,19 @@ import { ProfileScreen } from './components/ProfileScreen';
 import { EnhancedQuizScreen } from './components/EnhancedQuizScreen';
 import { AccountSettingsScreen } from './components/AccountSettingsScreen';
 import { HelpSupportScreen } from './components/HelpSupportScreen';
+import { StoriesScreen } from './components/StoriesScreen';
+import { PoetryScreen } from './components/PoetryScreen';
+import { ShapesScreen } from './components/ShapesScreen';
+import { NumberSpellingScreen } from './components/NumberSpellingScreen';
+import { PuzzlesScreen } from './components/PuzzlesScreen';
+import { MusicRhythmScreen } from './components/MusicRhythmScreen';
+import { GamesScreen } from './components/GamesScreen';
+import { TwoLetterWordsScreen } from './components/TwoLetterWordsScreen';
+import { ThreeLetterWordsScreen } from './components/ThreeLetterWordsScreen';
 import { SEOHead } from './components/SEOHead';
 import { projectId, publicAnonKey } from './utils/supabase/info.tsx';
 
-export type Screen = 'splash' | 'auth' | 'profileCreation' | 'home' | 'alphabet' | 'numbers' | 'fruits' | 'animals' | 'vegetables' | 'videos' | 'profile' | 'quiz' | 'accountSettings' | 'helpSupport';
+export type Screen = 'splash' | 'auth' | 'profileCreation' | 'home' | 'alphabet' | 'numbers' | 'fruits' | 'animals' | 'vegetables' | 'videos' | 'profile' | 'quiz' | 'accountSettings' | 'helpSupport' | 'stories' | 'poetry' | 'shapes' | 'numberSpelling' | 'puzzles' | 'musicRhythm' | 'games' | 'twoLetterWords' | 'threeLetterWords';
 
 export interface User {
   id: string;
@@ -36,14 +45,57 @@ export default function App() {
   const [accessToken, setAccessToken] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
 
+  // Check for saved session on mount
+  useEffect(() => {
+    const checkSavedSession = async () => {
+      const savedToken = localStorage.getItem('educare_access_token');
+      const savedUserId = localStorage.getItem('educare_user_id');
+      
+      if (savedToken && savedUserId) {
+        try {
+          // Verify token and get user profile
+          const response = await fetch(
+            `https://${projectId}.supabase.co/functions/v1/make-server-97f4c85e/profile/${savedUserId}`,
+            {
+              headers: {
+                'Authorization': `Bearer ${publicAnonKey}`,
+              },
+            }
+          );
+
+          if (response.ok) {
+            const data = await response.json();
+            if (data.user) {
+              setAccessToken(savedToken);
+              setUser(data.user);
+              setCurrentScreen('home');
+              return;
+            }
+          }
+        } catch (error) {
+          console.error('Error restoring session:', error);
+        }
+        
+        // Clear invalid session
+        localStorage.removeItem('educare_access_token');
+        localStorage.removeItem('educare_user_id');
+      }
+    };
+
+    checkSavedSession();
+  }, []);
+
   useEffect(() => {
     // Splash screen duration
     const timer = setTimeout(() => {
-      setCurrentScreen('auth');
+      // Only navigate to auth if no user is logged in
+      if (!user) {
+        setCurrentScreen('auth');
+      }
     }, 2500);
 
     return () => clearTimeout(timer);
-  }, []);
+  }, [user]);
 
   // Initialize quiz data on first load (call once to populate database)
   useEffect(() => {
@@ -99,6 +151,10 @@ export default function App() {
 
       setAccessToken(data.accessToken);
       setUser(data.user);
+      
+      // Save session to localStorage
+      localStorage.setItem('educare_access_token', data.accessToken);
+      localStorage.setItem('educare_user_id', data.user.id);
       
       // Check if profile is completed
       if (data.user.profileCompleted) {
@@ -183,6 +239,10 @@ export default function App() {
   };
 
   const handleLogout = () => {
+    // Clear saved session
+    localStorage.removeItem('educare_access_token');
+    localStorage.removeItem('educare_user_id');
+    
     setUser(null);
     setAccessToken(null);
     setCurrentScreen('auth');
@@ -282,6 +342,54 @@ export default function App() {
           <HelpSupportScreen 
             onNavigate={navigateToScreen}
           />
+        )}
+
+        {currentScreen === 'stories' && (
+          <StoriesScreen onNavigate={navigateToScreen} />
+        )}
+
+        {currentScreen === 'poetry' && (
+          <PoetryScreen onNavigate={navigateToScreen} />
+        )}
+
+        {currentScreen === 'shapes' && (
+          <ShapesScreen onNavigate={navigateToScreen} />
+        )}
+
+        {currentScreen === 'numberSpelling' && (
+          <NumberSpellingScreen onNavigate={navigateToScreen} />
+        )}
+
+        {currentScreen === 'puzzles' && user && (
+          <PuzzlesScreen 
+            onNavigate={navigateToScreen}
+            userId={user.id}
+            accessToken={accessToken || undefined}
+          />
+        )}
+
+        {currentScreen === 'musicRhythm' && user && (
+          <MusicRhythmScreen 
+            onNavigate={navigateToScreen}
+            userId={user.id}
+            accessToken={accessToken || undefined}
+          />
+        )}
+
+        {currentScreen === 'games' && user && (
+          <GamesScreen 
+            onNavigate={navigateToScreen}
+            userId={user.id}
+            accessToken={accessToken || undefined}
+          />
+        )}
+
+        {currentScreen === 'twoLetterWords' && (
+          <TwoLetterWordsScreen onNavigate={navigateToScreen} />
+        )}
+
+        {currentScreen === 'threeLetterWords' && (
+          <ThreeLetterWordsScreen onNavigate={navigateToScreen} />
         )}
 
         {/* Bottom Navigation - Only show when logged in and profile completed */}

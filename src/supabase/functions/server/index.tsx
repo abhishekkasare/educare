@@ -304,6 +304,30 @@ app.post("/make-server-97f4c85e/init-quiz-data", async (c) => {
       
       // Vegetables Questions (Hard)
       { id: 'q30', category: 'vegetables', difficulty: 'hard', points: 100, question: 'Which vegetable is also known as aubergine?', options: ['Zucchini', 'Eggplant', 'Bell Pepper', 'Squash'], correctAnswer: 'Eggplant' },
+      
+      // Two Letter Words Questions (Easy)
+      { id: 'q31', category: 'twoLetterWords', difficulty: 'easy', points: 50, question: 'What word means "in or to a place"?', options: ['AT', 'BY', 'OR', 'UP'], correctAnswer: 'AT' },
+      { id: 'q32', category: 'twoLetterWords', difficulty: 'easy', points: 50, question: 'What word means "to move"?', options: ['DO', 'GO', 'BE', 'IS'], correctAnswer: 'GO' },
+      { id: 'q33', category: 'twoLetterWords', difficulty: 'easy', points: 50, question: 'What word means "inside"?', options: ['IN', 'ON', 'UP', 'BY'], correctAnswer: 'IN' },
+      
+      // Two Letter Words Questions (Medium)
+      { id: 'q34', category: 'twoLetterWords', difficulty: 'medium', points: 75, question: 'What word means "not any"?', options: ['NO', 'OR', 'SO', 'IF'], correctAnswer: 'NO' },
+      { id: 'q35', category: 'twoLetterWords', difficulty: 'medium', points: 75, question: 'What word means "you and I"?', options: ['US', 'WE', 'ME', 'MY'], correctAnswer: 'WE' },
+      
+      // Two Letter Words Questions (Hard)
+      { id: 'q36', category: 'twoLetterWords', difficulty: 'hard', points: 100, question: 'Which word means "in case that"?', options: ['IF', 'AS', 'OR', 'BY'], correctAnswer: 'IF' },
+      
+      // Three Letter Words Questions (Easy)
+      { id: 'q37', category: 'threeLetterWords', difficulty: 'easy', points: 50, question: 'What is the 3-letter word for a small pet animal?', options: ['DOG', 'CAT', 'BAT', 'COW'], correctAnswer: 'CAT' },
+      { id: 'q38', category: 'threeLetterWords', difficulty: 'easy', points: 50, question: 'What is the 3-letter word for a friendly pet?', options: ['DOG', 'CAT', 'FOX', 'COW'], correctAnswer: 'DOG' },
+      { id: 'q39', category: 'threeLetterWords', difficulty: 'easy', points: 50, question: 'What is the 3-letter word for a bright star in sky?', options: ['SUN', 'SKY', 'TOP', 'BOX'], correctAnswer: 'SUN' },
+      
+      // Three Letter Words Questions (Medium)
+      { id: 'q40', category: 'threeLetterWords', difficulty: 'medium', points: 75, question: 'What is the 3-letter word for "to move fast"?', options: ['RUN', 'JOY', 'FAN', 'NET'], correctAnswer: 'RUN' },
+      { id: 'q41', category: 'threeLetterWords', difficulty: 'medium', points: 75, question: 'What is the 3-letter word for "happiness"?', options: ['JOY', 'RUN', 'TOY', 'KEY'], correctAnswer: 'JOY' },
+      
+      // Three Letter Words Questions (Hard)
+      { id: 'q42', category: 'threeLetterWords', difficulty: 'hard', points: 100, question: 'What 3-letter word means "the highest part"?', options: ['TOP', 'NET', 'MAP', 'BOX'], correctAnswer: 'TOP' },
     ];
 
     // Store each question in KV store
@@ -454,6 +478,52 @@ app.delete("/make-server-97f4c85e/delete-account", async (c) => {
   } catch (error) {
     console.error('Delete account error:', error);
     return c.json({ error: `Server error deleting account: ${error.message}` }, 500);
+  }
+});
+
+// Save activity score endpoint - for puzzles, music, and games
+app.post("/make-server-97f4c85e/save-activity-score", async (c) => {
+  try {
+    const accessToken = c.req.header('Authorization')?.split(' ')[1];
+    const { data: { user }, error: authError } = await supabase.auth.getUser(accessToken);
+    
+    if (!user?.id || authError) {
+      return c.json({ error: 'Unauthorized' }, 401);
+    }
+
+    const { activityType, activityName, score } = await c.req.json();
+    
+    const userProfile = await kv.get(`user:${user.id}`);
+    if (!userProfile) {
+      return c.json({ error: 'User profile not found' }, 404);
+    }
+
+    const activityResult = {
+      activityType,
+      activityName,
+      score,
+      date: new Date().toISOString()
+    };
+
+    // Initialize activities array if it doesn't exist
+    const activities = userProfile.activities || [];
+    activities.push(activityResult);
+
+    const updatedProfile = {
+      ...userProfile,
+      totalPoints: userProfile.totalPoints + score,
+      activities: activities
+    };
+
+    await kv.set(`user:${user.id}`, updatedProfile);
+
+    return c.json({ 
+      success: true,
+      user: updatedProfile 
+    });
+  } catch (error) {
+    console.error('Save activity score error:', error);
+    return c.json({ error: `Server error saving activity score: ${error.message}` }, 500);
   }
 });
 

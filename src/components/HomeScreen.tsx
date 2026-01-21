@@ -1,6 +1,6 @@
 import { motion } from 'motion/react';
 import { User as UserType } from '../App';
-import { BookA, Hash, Apple, Cat, Carrot, Youtube, Trophy } from 'lucide-react';
+import { BookA, Hash, Apple, Cat, Carrot, Youtube, Trophy, BookOpen, Music2, Shapes, Gamepad2, Puzzle, Sparkles, Type } from 'lucide-react';
 
 interface HomeScreenProps {
   user: UserType;
@@ -26,6 +26,60 @@ export function HomeScreen({ user, onNavigate }: HomeScreenProps) {
       bgColor: 'bg-purple-50',
       textColor: 'text-purple-600',
       description: 'Count 1 to 100'
+    },
+    { 
+      id: 'numberSpelling', 
+      title: 'Spell Numbers', 
+      icon: Hash, 
+      color: 'from-indigo-500 to-purple-500',
+      bgColor: 'bg-indigo-50',
+      textColor: 'text-indigo-600',
+      description: 'Spell 1 to 30'
+    },
+    { 
+      id: 'twoLetterWords', 
+      title: '2-Letter Words', 
+      icon: Type, 
+      color: 'from-blue-500 to-indigo-500',
+      bgColor: 'bg-blue-50',
+      textColor: 'text-blue-600',
+      description: 'Simple Words'
+    },
+    { 
+      id: 'threeLetterWords', 
+      title: '3-Letter Words', 
+      icon: Type, 
+      color: 'from-green-500 to-blue-500',
+      bgColor: 'bg-green-50',
+      textColor: 'text-green-600',
+      description: 'Easy Words'
+    },
+    { 
+      id: 'shapes', 
+      title: 'Shapes', 
+      icon: Shapes, 
+      color: 'from-teal-500 to-cyan-500',
+      bgColor: 'bg-teal-50',
+      textColor: 'text-teal-600',
+      description: 'Learn Shapes'
+    },
+    { 
+      id: 'stories', 
+      title: 'Stories', 
+      icon: BookOpen, 
+      color: 'from-blue-500 to-purple-500',
+      bgColor: 'bg-blue-50',
+      textColor: 'text-blue-600',
+      description: 'Read & Listen'
+    },
+    { 
+      id: 'poetry', 
+      title: 'Poetry', 
+      icon: Sparkles, 
+      color: 'from-pink-500 to-rose-500',
+      bgColor: 'bg-pink-50',
+      textColor: 'text-pink-600',
+      description: 'Rhymes & Poems'
     },
     { 
       id: 'fruits', 
@@ -55,6 +109,33 @@ export function HomeScreen({ user, onNavigate }: HomeScreenProps) {
       description: 'Good for You'
     },
     { 
+      id: 'puzzles', 
+      title: 'Puzzles', 
+      icon: Puzzle, 
+      color: 'from-purple-500 to-pink-500',
+      bgColor: 'bg-purple-50',
+      textColor: 'text-purple-600',
+      description: 'Solve & Learn'
+    },
+    { 
+      id: 'musicRhythm', 
+      title: 'Music', 
+      icon: Music2, 
+      color: 'from-yellow-500 to-orange-500',
+      bgColor: 'bg-yellow-50',
+      textColor: 'text-yellow-600',
+      description: 'Make Music'
+    },
+    { 
+      id: 'games', 
+      title: 'Games', 
+      icon: Gamepad2, 
+      color: 'from-cyan-500 to-blue-500',
+      bgColor: 'bg-cyan-50',
+      textColor: 'text-cyan-600',
+      description: 'Play & Win'
+    },
+    { 
       id: 'videos', 
       title: 'Videos', 
       icon: Youtube, 
@@ -62,6 +143,15 @@ export function HomeScreen({ user, onNavigate }: HomeScreenProps) {
       bgColor: 'bg-rose-50',
       textColor: 'text-rose-600',
       description: 'Watch & Learn'
+    },
+    { 
+      id: 'types', 
+      title: 'Types', 
+      icon: Type, 
+      color: 'from-gray-500 to-gray-700',
+      bgColor: 'bg-gray-50',
+      textColor: 'text-gray-600',
+      description: 'Learn Types'
     },
   ];
 

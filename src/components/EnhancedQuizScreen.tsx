@@ -23,7 +23,7 @@ interface EnhancedQuizScreenProps {
 }
 
 type Difficulty = 'easy' | 'medium' | 'hard';
-type Category = 'all' | 'alphabet' | 'numbers' | 'fruits' | 'animals' | 'vegetables';
+type Category = 'all' | 'alphabet' | 'numbers' | 'fruits' | 'animals' | 'vegetables' | 'twoLetterWords' | 'threeLetterWords';
 
 interface Question {
   id: string;
@@ -55,6 +55,8 @@ export function EnhancedQuizScreen({ user, onNavigate, onUpdatePoints, accessTok
     { id: 'fruits' as Category, name: 'Fruits', emoji: '🍎', color: 'from-red-500 to-orange-500' },
     { id: 'animals' as Category, name: 'Animals', emoji: '🐘', color: 'from-amber-500 to-yellow-500' },
     { id: 'vegetables' as Category, name: 'Vegetables', emoji: '🥕', color: 'from-lime-500 to-green-500' },
+    { id: 'twoLetterWords' as Category, name: 'Two Letter Words', emoji: '📚', color: 'from-indigo-500 to-violet-500' },
+    { id: 'threeLetterWords' as Category, name: 'Three Letter Words', emoji: '📚', color: 'from-indigo-500 to-violet-500' },
   ];
 
   const speak = (text: string) => {
