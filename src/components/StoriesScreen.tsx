@@ -26,7 +26,7 @@ The moral: Hard work and planning pay off!`
     title: 'The Lion and the Mouse',
     emoji: '🦁',
     color: 'from-yellow-400 to-orange-600',
-    videoUrl: 'https://www.youtube.com/embed/wbXzCqB_Ybw',
+    videoUrl: 'https://www.youtube.com/embed/iGPOUHFYKik?si=eZ7aOoSiJZyhVmID',
     content: `One day, a mighty lion was sleeping under a tree when a tiny mouse ran over his paw. The lion woke up and grabbed the mouse.
 
 "Please don't eat me!" squeaked the mouse. "If you let me go, I will help you one day!"
@@ -44,7 +44,7 @@ The moral: Everyone can help, no matter how small!`
     title: 'The Tortoise and the Hare',
     emoji: '🐢',
     color: 'from-green-400 to-emerald-600',
-    videoUrl: 'https://www.youtube.com/embed/eiRGRvE_Wqg',
+    videoUrl: 'https://www.youtube.com/embed/eMXmMHVNx4U?si=Fjzw_bv-gFRfDQqB',
     content: `Once, a speedy hare made fun of a slow tortoise. "You're so slow!" laughed the hare.
 
 "Let's have a race," said the tortoise calmly.
@@ -62,7 +62,7 @@ The moral: Slow and steady wins the race!`
     title: 'The Boy Who Cried Wolf',
     emoji: '🐺',
     color: 'from-blue-400 to-indigo-600',
-    videoUrl: 'https://www.youtube.com/embed/IcS3uE1bN9Q',
+    videoUrl: 'https://www.youtube.com/embed/uV7e0nSQOnE?si=IxIuhgsQacdv54yf',
     content: `There was a shepherd boy who watched sheep on a hill. He got bored and shouted, "Wolf! Wolf! A wolf is attacking the sheep!"
 
 The villagers ran to help, but there was no wolf. The boy laughed. A few days later, he did it again. "Wolf! Wolf!" The villagers came running again, but there was no wolf.
@@ -78,7 +78,7 @@ The moral: If you lie, people won't believe you when you tell the truth!`
     title: 'The Ugly Duckling',
     emoji: '🦢',
     color: 'from-purple-400 to-pink-600',
-    videoUrl: 'https://www.youtube.com/embed/QaL7EqKvPTk',
+    videoUrl: 'https://www.youtube.com/embed/BVeeWuBpkhY?si=i0Zzpt0rEAR9pfk2',
     content: `In a farmyard, a mother duck's eggs hatched. All the ducklings were cute and yellow, except one who was big, gray, and ugly.
 
 Everyone called him "the ugly duckling" and was mean to him. Sad and lonely, the duckling ran away.
@@ -96,7 +96,7 @@ The moral: Don't judge by appearances. Everyone is special in their own way!`
     title: 'Goldilocks and the Three Bears',
     emoji: '🐻',
     color: 'from-amber-400 to-brown-600',
-    videoUrl: 'https://www.youtube.com/embed/IbHL-5hnBiY',
+    videoUrl: 'https://www.youtube.com/embed/qOJ_A5tgBKM?si=dJiMSsDY0WiTcj1t',
     content: `Once upon a time, there was a little girl named Goldilocks. One day, she found a house in the forest and went inside.
 
 She saw three bowls of porridge. The first was too hot, the second was too cold, but the third was just right! So she ate it all up.
