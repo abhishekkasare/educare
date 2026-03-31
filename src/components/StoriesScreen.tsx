@@ -12,7 +12,7 @@ const stories = [
     title: 'The Three Little Pigs',
     emoji: '🐷',
     color: 'from-pink-400 to-pink-600',
-    videoUrl: 'https://www.youtube.com/embed/SqB1lg_VVBE',
+    videoUrl: 'https://www.youtube.com/embed/-gdcgnSrUvU?si=pzvu3Sl19iRHvjSG',
     content: `Once upon a time, there were three little pigs who built three houses. The first pig built his house with straw. The second pig built his house with sticks. The third pig built his house with bricks.
 
 One day, a big bad wolf came and huffed and puffed and blew down the straw house! The first pig ran to the stick house. The wolf huffed and puffed and blew down the stick house too! Both pigs ran to the brick house.
