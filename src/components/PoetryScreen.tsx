@@ -26,7 +26,7 @@ How I wonder what you are!`
     title: 'Humpty Dumpty',
     emoji: '🥚',
     color: 'from-orange-400 to-red-600',
-    videoUrl: 'https://www.youtube.com/embed/QHON6KhvKSY',
+    videoUrl: 'https://www.youtube.com/embed/nrv495corBc?si=aYuUv0qa9gnL26FT',
     content: `Humpty Dumpty sat on a wall,
 Humpty Dumpty had a great fall.
 All the king's horses and all the king's men,
@@ -37,7 +37,7 @@ Couldn't put Humpty together again!`
     title: 'Mary Had a Little Lamb',
     emoji: '🐑',
     color: 'from-pink-400 to-rose-600',
-    videoUrl: 'https://www.youtube.com/embed/eFX1nVCLXLY',
+    videoUrl: 'https://www.youtube.com/embed/YE7PiTwhTQk?si=n6JldXAfysUEdmoj',
     content: `Mary had a little lamb,
 Little lamb, little lamb,
 Mary had a little lamb,
@@ -53,7 +53,7 @@ The lamb was sure to go!`
     title: 'Jack and Jill',
     emoji: '🪣',
     color: 'from-blue-400 to-cyan-600',
-    videoUrl: 'https://www.youtube.com/embed/MZ_v1a7xRRo',
+    videoUrl: 'https://www.youtube.com/embed/FYojUSFfuMg?si=-yr-8uY4Q_DCYlw2',
     content: `Jack and Jill went up the hill,
 To fetch a pail of water.
 Jack fell down and broke his crown,
@@ -64,7 +64,7 @@ And Jill came tumbling after!`
     title: 'Baa Baa Black Sheep',
     emoji: '🐑',
     color: 'from-slate-600 to-slate-800',
-    videoUrl: 'https://www.youtube.com/embed/d1TgG4w0BkU',
+    videoUrl: 'https://www.youtube.com/embed/BQ_gTCPvCns?si=iSeADmPWXr9_ax0K',
     content: `Baa, baa, black sheep,
 Have you any wool?
 Yes sir, yes sir,
@@ -80,7 +80,7 @@ Who lives down the lane!`
     title: 'Itsy Bitsy Spider',
     emoji: '🕷️',
     color: 'from-purple-400 to-indigo-600',
-    videoUrl: 'https://www.youtube.com/embed/jSN0rCIlSpw',
+    videoUrl: 'https://www.youtube.com/embed/w_lCi8U49mY?si=FDS2oRIFVvxMgHQ7',
     content: `The itsy bitsy spider,
 Climbed up the water spout.
 Down came the rain,
@@ -96,7 +96,7 @@ Climbed up the spout again!`
     title: 'Row Row Row Your Boat',
     emoji: '🚣',
     color: 'from-teal-400 to-blue-600',
-    videoUrl: 'https://www.youtube.com/embed/R_B6oeN-MTs',
+    videoUrl: 'https://www.youtube.com/embed/fDR_pRHYMGA?si=ecBxs3l9fcy_T0aT',
     content: `Row, row, row your boat,
 Gently down the stream.
 Merrily, merrily, merrily, merrily,
@@ -107,7 +107,7 @@ Life is but a dream!`
     title: 'Five Little Ducks',
     emoji: '🦆',
     color: 'from-yellow-400 to-green-600',
-    videoUrl: 'https://www.youtube.com/embed/_Ir0Mc6Qilo',
+    videoUrl: 'https://www.youtube.com/embed/pZw9veQ76fo?si=TVkMEXtd6bewUhdi',
     content: `Five little ducks went out one day,
 Over the hills and far away.
 Mother duck said, "Quack, quack, quack, quack,"
@@ -118,7 +118,7 @@ But only four little ducks came back!`
     title: 'Old MacDonald Had a Farm',
     emoji: '🚜',
     color: 'from-green-400 to-lime-600',
-    videoUrl: 'https://www.youtube.com/embed/qPbB2Ky0mRk',
+    videoUrl: 'https://www.youtube.com/embed/_6HzoUcx3eo?si=hVcovyhIZmLUqkSI',
     content: `Old MacDonald had a farm,
 E-I-E-I-O!
 And on his farm he had a cow,
@@ -137,7 +137,7 @@ E-I-E-I-O!`
     title: 'Wheels on the Bus',
     emoji: '🚌',
     color: 'from-orange-400 to-amber-600',
-    videoUrl: 'https://www.youtube.com/embed/e_04ZrNroTo',
+    videoUrl: 'https://www.youtube.com/embed/e_04ZrNroTo?si=vvaq_MwPA_KGqR0Z',
     content: `The wheels on the bus go round and round,
 Round and round, round and round.
 The wheels on the bus go round and round,
