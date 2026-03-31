@@ -12,7 +12,7 @@ const stories = [
     title: 'The Three Little Pigs',
     emoji: '🐷',
     color: 'from-pink-400 to-pink-600',
-    videoUrl: 'https://www.youtube.com/embed/QLR8LkHW0-U',
+    videoUrl: 'https://www.youtube.com/embed/SqB1lg_VVBE',
     content: `Once upon a time, there were three little pigs who built three houses. The first pig built his house with straw. The second pig built his house with sticks. The third pig built his house with bricks.
 
 One day, a big bad wolf came and huffed and puffed and blew down the straw house! The first pig ran to the stick house. The wolf huffed and puffed and blew down the stick house too! Both pigs ran to the brick house.
@@ -26,7 +26,7 @@ The moral: Hard work and planning pay off!`
     title: 'The Lion and the Mouse',
     emoji: '🦁',
     color: 'from-yellow-400 to-orange-600',
-    videoUrl: 'https://www.youtube.com/embed/u47Qq_6txbg',
+    videoUrl: 'https://www.youtube.com/embed/wbXzCqB_Ybw',
     content: `One day, a mighty lion was sleeping under a tree when a tiny mouse ran over his paw. The lion woke up and grabbed the mouse.
 
 "Please don't eat me!" squeaked the mouse. "If you let me go, I will help you one day!"
@@ -44,7 +44,7 @@ The moral: Everyone can help, no matter how small!`
     title: 'The Tortoise and the Hare',
     emoji: '🐢',
     color: 'from-green-400 to-emerald-600',
-    videoUrl: 'https://www.youtube.com/embed/AxU03hz50u4',
+    videoUrl: 'https://www.youtube.com/embed/eiRGRvE_Wqg',
     content: `Once, a speedy hare made fun of a slow tortoise. "You're so slow!" laughed the hare.
 
 "Let's have a race," said the tortoise calmly.
@@ -62,7 +62,7 @@ The moral: Slow and steady wins the race!`
     title: 'The Boy Who Cried Wolf',
     emoji: '🐺',
     color: 'from-blue-400 to-indigo-600',
-    videoUrl: 'https://www.youtube.com/embed/fW4Aobh-B9E',
+    videoUrl: 'https://www.youtube.com/embed/IcS3uE1bN9Q',
     content: `There was a shepherd boy who watched sheep on a hill. He got bored and shouted, "Wolf! Wolf! A wolf is attacking the sheep!"
 
 The villagers ran to help, but there was no wolf. The boy laughed. A few days later, he did it again. "Wolf! Wolf!" The villagers came running again, but there was no wolf.
@@ -78,7 +78,7 @@ The moral: If you lie, people won't believe you when you tell the truth!`
     title: 'The Ugly Duckling',
     emoji: '🦢',
     color: 'from-purple-400 to-pink-600',
-    videoUrl: 'https://www.youtube.com/embed/gOaIDz0ZBSM',
+    videoUrl: 'https://www.youtube.com/embed/QaL7EqKvPTk',
     content: `In a farmyard, a mother duck's eggs hatched. All the ducklings were cute and yellow, except one who was big, gray, and ugly.
 
 Everyone called him "the ugly duckling" and was mean to him. Sad and lonely, the duckling ran away.
@@ -90,6 +90,24 @@ But when he looked at his reflection, he saw that he had turned into a beautiful
 The other swans welcomed him warmly.
 
 The moral: Don't judge by appearances. Everyone is special in their own way!`
+  },
+  {
+    id: 6,
+    title: 'Goldilocks and the Three Bears',
+    emoji: '🐻',
+    color: 'from-amber-400 to-brown-600',
+    videoUrl: 'https://www.youtube.com/embed/IbHL-5hnBiY',
+    content: `Once upon a time, there was a little girl named Goldilocks. One day, she found a house in the forest and went inside.
+
+She saw three bowls of porridge. The first was too hot, the second was too cold, but the third was just right! So she ate it all up.
+
+Then she found three chairs. The first was too big, the second was too big, but the third was just right! But she sat too hard and broke it!
+
+Goldilocks was sleepy, so she found three beds. The first was too hard, the second was too soft, but the third was just right! She fell asleep.
+
+The three bears came home and found Goldilocks! She woke up, ran away, and never came back.
+
+The moral: Don't enter someone else's home without permission!`
   }
 ];
 

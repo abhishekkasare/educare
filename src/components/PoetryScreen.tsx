@@ -37,7 +37,7 @@ Couldn't put Humpty together again!`
     title: 'Mary Had a Little Lamb',
     emoji: '🐑',
     color: 'from-pink-400 to-rose-600',
-    videoUrl: 'https://www.youtube.com/embed/qcjiL6egYTA',
+    videoUrl: 'https://www.youtube.com/embed/eFX1nVCLXLY',
     content: `Mary had a little lamb,
 Little lamb, little lamb,
 Mary had a little lamb,
@@ -53,7 +53,7 @@ The lamb was sure to go!`
     title: 'Jack and Jill',
     emoji: '🪣',
     color: 'from-blue-400 to-cyan-600',
-    videoUrl: 'https://www.youtube.com/embed/KGvvwoobV-8',
+    videoUrl: 'https://www.youtube.com/embed/MZ_v1a7xRRo',
     content: `Jack and Jill went up the hill,
 To fetch a pail of water.
 Jack fell down and broke his crown,
@@ -64,7 +64,7 @@ And Jill came tumbling after!`
     title: 'Baa Baa Black Sheep',
     emoji: '🐑',
     color: 'from-slate-600 to-slate-800',
-    videoUrl: 'https://www.youtube.com/embed/KZ7s5qehdII',
+    videoUrl: 'https://www.youtube.com/embed/d1TgG4w0BkU',
     content: `Baa, baa, black sheep,
 Have you any wool?
 Yes sir, yes sir,
@@ -80,7 +80,7 @@ Who lives down the lane!`
     title: 'Itsy Bitsy Spider',
     emoji: '🕷️',
     color: 'from-purple-400 to-indigo-600',
-    videoUrl: 'https://www.youtube.com/embed/OTpdKKC1xXg',
+    videoUrl: 'https://www.youtube.com/embed/jSN0rCIlSpw',
     content: `The itsy bitsy spider,
 Climbed up the water spout.
 Down came the rain,
@@ -96,7 +96,7 @@ Climbed up the spout again!`
     title: 'Row Row Row Your Boat',
     emoji: '🚣',
     color: 'from-teal-400 to-blue-600',
-    videoUrl: 'https://www.youtube.com/embed/7otAJa3jui8',
+    videoUrl: 'https://www.youtube.com/embed/R_B6oeN-MTs',
     content: `Row, row, row your boat,
 Gently down the stream.
 Merrily, merrily, merrily, merrily,
@@ -107,11 +107,46 @@ Life is but a dream!`
     title: 'Five Little Ducks',
     emoji: '🦆',
     color: 'from-yellow-400 to-green-600',
-    videoUrl: 'https://www.youtube.com/embed/pZw9veQ76fo',
+    videoUrl: 'https://www.youtube.com/embed/_Ir0Mc6Qilo',
     content: `Five little ducks went out one day,
 Over the hills and far away.
 Mother duck said, "Quack, quack, quack, quack,"
 But only four little ducks came back!`
+  },
+  {
+    id: 9,
+    title: 'Old MacDonald Had a Farm',
+    emoji: '🚜',
+    color: 'from-green-400 to-lime-600',
+    videoUrl: 'https://www.youtube.com/embed/qPbB2Ky0mRk',
+    content: `Old MacDonald had a farm,
+E-I-E-I-O!
+And on his farm he had a cow,
+E-I-E-I-O!
+
+With a moo-moo here,
+And a moo-moo there,
+Here a moo, there a moo,
+Everywhere a moo-moo!
+
+Old MacDonald had a farm,
+E-I-E-I-O!`
+  },
+  {
+    id: 10,
+    title: 'Wheels on the Bus',
+    emoji: '🚌',
+    color: 'from-orange-400 to-amber-600',
+    videoUrl: 'https://www.youtube.com/embed/e_04ZrNroTo',
+    content: `The wheels on the bus go round and round,
+Round and round, round and round.
+The wheels on the bus go round and round,
+All through the town!
+
+The wipers on the bus go swish, swish, swish,
+Swish, swish, swish, swish, swish, swish.
+The wipers on the bus go swish, swish, swish,
+All through the town!`
   }
 ];
 

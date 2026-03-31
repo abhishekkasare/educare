@@ -144,15 +144,6 @@ export function HomeScreen({ user, onNavigate }: HomeScreenProps) {
       textColor: 'text-rose-600',
       description: 'Watch & Learn'
     },
-    { 
-      id: 'types', 
-      title: 'Types', 
-      icon: Type, 
-      color: 'from-gray-500 to-gray-700',
-      bgColor: 'bg-gray-50',
-      textColor: 'text-gray-600',
-      description: 'Learn Types'
-    },
   ];
 
   const getAvatarEmoji = (avatar?: string) => {

@@ -14,6 +14,7 @@ import { Button } from './ui/button';
 import { Progress } from './ui/progress';
 import { Badge } from './ui/badge';
 import { projectId, publicAnonKey } from '../utils/supabase/info.tsx';
+import { Question, getQuizQuestions } from '../utils/quizData';
 
 interface EnhancedQuizScreenProps {
   user: User;
@@ -24,16 +25,6 @@ interface EnhancedQuizScreenProps {
 
 type Difficulty = 'easy' | 'medium' | 'hard';
 type Category = 'all' | 'alphabet' | 'numbers' | 'fruits' | 'animals' | 'vegetables' | 'twoLetterWords' | 'threeLetterWords';
-
-interface Question {
-  id: string;
-  category: string;
-  difficulty: Difficulty;
-  points: number;
-  question: string;
-  options: string[];
-  correctAnswer: string;
-}
 
 type QuizState = 'category' | 'playing' | 'result';
 
@@ -70,24 +61,12 @@ export function EnhancedQuizScreen({ user, onNavigate, onUpdatePoints, accessTok
   const fetchQuizQuestions = async (category: Category) => {
     setLoading(true);
     try {
-      const response = await fetch(
-        `https://${projectId}.supabase.co/functions/v1/make-server-97f4c85e/quiz-questions?category=${category}&count=10`,
-        {
-          headers: {
-            'Authorization': `Bearer ${publicAnonKey}`,
-          },
-        }
-      );
-
-      if (!response.ok) {
-        throw new Error('Failed to fetch questions');
-      }
-
-      const data = await response.json();
-      setQuestions(data.questions);
-      setAnswers(new Array(data.questions.length).fill(null));
+      // Use local quiz data instead of fetching from backend
+      const quizQuestions = getQuizQuestions(category, 10);
+      setQuestions(quizQuestions);
+      setAnswers(new Array(quizQuestions.length).fill(null));
     } catch (error) {
-      console.error('Error fetching quiz questions:', error);
+      console.error('Error loading quiz questions:', error);
       speak('Sorry, there was an error loading the quiz. Please try again.');
     } finally {
       setLoading(false);
